@@ -12,3 +12,6 @@ repositories {
     maven { url 'https://maven.aliyun.com/repository/public' }
     mavenCentral()
 }
+dependencies {
+    implementation 'com.alibaba:fastjson:1.2.83'
+}
