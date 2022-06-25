@@ -1,6 +1,7 @@
 package cn.shimeng;
 
-import cn.shimeng.Listens.GroupListen;
+import cn.shimeng.Listens.GroupListener;
+import cn.shimeng.Listens.PrivateListener;
 import net.mamoe.mirai.console.extension.PluginComponentStorage;
 import net.mamoe.mirai.console.plugin.jvm.JavaPlugin;
 import net.mamoe.mirai.console.plugin.jvm.JvmPluginDescriptionBuilder;
@@ -24,8 +25,10 @@ public final class Basicplugin extends JavaPlugin {
     }
     @Override
     public void onLoad(@NotNull PluginComponentStorage $this$onLoad) {
-        new GroupListen();
+        new GroupListener();
         getLogger().info("GroupListener loaded!");
+        new PrivateListener();
+        getLogger().info("PrivateListener loaded!");
         super.onLoad($this$onLoad);
     }
 }
