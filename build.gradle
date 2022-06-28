@@ -14,4 +14,6 @@ repositories {
 }
 dependencies {
     implementation 'com.alibaba:fastjson:1.2.83'
+    implementation 'org.ini4j:ini4j:0.5.4'
+    implementation 'org.apache.commons:commons-lang3:3.4'
 }
