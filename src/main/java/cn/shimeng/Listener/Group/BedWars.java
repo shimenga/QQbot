@@ -21,7 +21,7 @@ public class BedWars {
                         HttpUtils.HttpGetResult result = HttpUtils.getHttps("https://api.mojang.com/users/profiles/minecraft/" + name);
                         if (result.response == 200) {
                             JSONObject json = JSON.parseObject(result.result);
-                            HttpUtils.HttpGetResult res = HttpUtils.getHttps("https://api.hypixel.net/player?key=8219d452-b2a8-4580-8b09-15775eb12579&uuid=" + json.getString("id"));
+                            HttpUtils.HttpGetResult res = HttpUtils.getHttps("https://api.hypixel.net/player?key=&uuid=" + json.getString("id"));
                             if (res.response == 200) {
                                 JSONObject json1 = JSON.parseObject(res.result);
                                 JSONObject bw = json1.getJSONObject("player").getJSONObject("stats").getJSONObject("BedWars");
